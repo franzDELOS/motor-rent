@@ -1,19 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-<<<<<<< Updated upstream
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-=======
 
           colors: {
             'forbg': '#404040;',
@@ -22,7 +15,6 @@ module.exports = {
             'forlink': '#1EA1EC',
             'forbtn': '#005281',
             'forsbmt': '#0095D3',
-            'foritem': '#404040',
             
           },
 
@@ -43,13 +35,8 @@ module.exports = {
           'hsearch': '1rem',
           'wfilter': '10.125rem',
           'hfilter': '3rem',
-          'hitem': ' 37.5rem;',
-          'hitem2': '12.875rem', 
-          'mtprice': '24%',
-          'hrent': '4.25rem',
-          'wrent': '10.75rem',
 
-
+             
           },
           fontFamily: {
             'poppins': ['Poppins', 'sans-serif']
@@ -60,14 +47,13 @@ module.exports = {
             sm: '16px',
             nav: '18px',
             title: '48px',
-            title2: '40px',
-            rent: '24px'
+            title2: '40px'
           },
           borderRadius:{
             brs: '5px',
             
           },
->>>>>>> Stashed changes
+
     },
   },
   plugins: [],
