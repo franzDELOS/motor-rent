@@ -54,7 +54,7 @@ export default function Filter() {
 
               <Image src={myMoto.image} alt="test" width={367} height={224} className="p-2" />
 
-              <h1 className="text-white font-poppins pl-5 text-nav font-bold mt-10">{myMoto.name}</h1>
+              <h1 className="text-white font-poppins pl-5 text-nav font-bold p-8">{myMoto.name}</h1>
           
             <div  className="bg-white mt-mtitem h-hitem2 pl-5 pt-7 mt-mtprice font-bold">
               <p  >
