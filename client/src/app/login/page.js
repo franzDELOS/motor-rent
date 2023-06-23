@@ -6,8 +6,6 @@ import Google from "./google.png";
 function loginpage() {
   return (
     <div className="bg-forbg h-screen p-3">
-    
-
       <div className=" bg-forcon flex justify-center p-10 border-2 shrink border-slate-950  ml-33 mt-mt w-31 h-35">
         <form className=" text-fortxt justify-center items-center ">
           <h1 className="p-1 font-poppins text-base font-semibold flex justify-center">
@@ -55,14 +53,27 @@ function loginpage() {
           </div>
 
           <div>
-            <input type="text" placeholder="Email" className="flex bg-white w-wbtn h-hbtn justify-center rounded-brs mt-4 p-3 placeholder:italic text-black" /> 
-            <input type="password" placeholder="Password" className="flex bg-white w-wbtn h-hbtn justify-center rounded-brs mt-4 p-3 placeholder:italic text-black" />
-
+            <input
+              type="text"
+              placeholder="Email"
+              className="flex bg-white w-wbtn h-hbtn justify-center rounded-brs mt-4 p-3 placeholder:italic text-black"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              className="flex bg-white w-wbtn h-hbtn justify-center rounded-brs mt-4 p-3 placeholder:italic text-black"
+            />
           </div>
 
-          <Link href='#' ><p className="mt-3 flex justify-end mr-3 text-forlink" >I forgot my password</p></Link>
-            <button className="flex bg-forsbmt w-wbtn h-hbtn justify-center rounded-brs mt-4"><p className="mt-2">Sign In</p></button>
-        </form >
+          <Link href="#">
+            <p className="mt-3 flex justify-end mr-3 text-forlink">
+              I forgot my password
+            </p>
+          </Link>
+          <button className="flex bg-forsbmt w-wbtn h-hbtn justify-center rounded-brs mt-4">
+            <p className="mt-2">Sign In</p>
+          </button>
+        </form>
       </div>
     </div>
   );

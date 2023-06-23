@@ -7,9 +7,6 @@ const Default = () => {
 
         <input type="text"  placeholder="Search..."  onChange={handleSearch}/>
           
-           
-   
-
            {myMoto.map((myMoto, index) => (
        <div key={index}>
                

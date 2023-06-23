@@ -50,33 +50,33 @@ export default function Filter() {
 
       <div className="mt-nav grid grid-cols-3 gap-4">
         {searchResults.map((myMoto, index) => (
-          <div key={index} className="text-black bg-foritem w-wsearch h-hitem  mb-nav">
+          <div
+            key={index}
+            className="text-black bg-foritem w-wsearch h-hitem  mb-nav"
+          >
+            <Image
+              src={myMoto.image}
+              alt="test"
+              width={367}
+              height={224}
+              className="p-2"
+            />
 
-              <Image src={myMoto.image} alt="test" width={367} height={224} className="p-2" />
+            <h1 className="text-white font-poppins pl-5 text-nav font-bold p-8">
+              {myMoto.name}
+            </h1>
 
-              <h1 className="text-white font-poppins pl-5 text-nav font-bold p-8">{myMoto.name}</h1>
-          
-            <div  className="bg-white mt-mtitem h-hitem2 pl-5 pt-7 mt-mtprice font-bold">
-              <p  >
-                {" "}
-                ₱ {myMoto.rent} / Day
-              </p>
-              <p >
-                {" "}
-                ₱ {myMoto.rent} / Weekly
-              </p>
-              <p >
-                {" "}
-                ₱ {myMoto.rent} / Monthly
-              </p>
+            <div className="bg-white mt-mtitem h-hitem2 pl-5 pt-7 mt-mtprice font-bold">
+              <p> ₱ {myMoto.rent} / Day</p>
+              <p> ₱ {myMoto.rent} / Weekly</p>
+              <p> ₱ {myMoto.rent} / Monthly</p>
 
-              <Link href={`/vehiclemodels/${myMoto.name}`} >
+              <Link href={`/vehiclemodels/${myMoto.name}`}>
                 <div className="bg-foritem h-hrent w-wrent float-right mr-4 mt-4 flex justify-center">
                   <h1 className=" text-white  mt-4 text-rent">Rent</h1>
                 </div>
               </Link>
             </div>
-           
           </div>
         ))}
       </div>
