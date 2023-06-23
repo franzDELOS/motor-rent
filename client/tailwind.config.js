@@ -53,6 +53,7 @@ module.exports = {
             brs: '5px',
             
           },
+
     },
   },
   plugins: [],
