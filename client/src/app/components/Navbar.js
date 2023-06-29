@@ -9,39 +9,6 @@ const  Header =() => {
 
 
 const pathname = usePathname()
-  const Navlink = [
-
-    {
-      name: 'Home' ,
-      link: '/'
-    },
-    {
-      name: 'About' ,
-      link: '#'
-    },
-    {
-      name: 'Safety' ,
-      link: '#'
-    },
-    {
-      name: 'Log in' ,
-      link: '/login'
-    },
-    {
-      name: 'Sign Up' ,
-      link: '/register'
-    },
-    {
-      image: Logo,
-      link: '#'
-    },
-
-
-  ]
-
-
-
-        
 
   return (
    <div>
@@ -60,23 +27,6 @@ const pathname = usePathname()
     />
     </Link>
   </li>
-  <li>    
-{/* {Navlink.map(({ link, name}) => (
-
-
-  
-  <Link
-  key={name}
-  href={link}
-  className={`${pathname === link ? 'text-red-500 ' : 'ml-5rem'} ml-nav  text-red font-bold `}
-  > {name}
-  </Link>
-
-
-
-))} */}
-
-</li>
 
 <li>
         <Link href="/"  className={` ${pathname === ('/') ? 'text-red-500' : ''} m-5 ml-[10rem]  font-bold`}>

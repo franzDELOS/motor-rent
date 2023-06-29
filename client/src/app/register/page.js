@@ -5,7 +5,7 @@ import Icon from "../login/icon.png";
 import Google from "../login/google.png";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import Navbar from "../components/Navbar";
+
 
 const Signup = () => {
 
@@ -27,7 +27,7 @@ const Signup = () => {
 
   return (
    <>
-   <Navbar/>
+
     <div className="bg-forbg h-full  p-5 ">
       <div className=" bg-forcon flex justify-center p-5 border-2 shrink border-slate-950  ml-[33%] mt-[5.6%] w-[29.25rem] ">
         <form onSubmit={handleSubmit(formSubmit)} className=" text-fortxt justify-center items-center" >

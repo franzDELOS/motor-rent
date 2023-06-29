@@ -1,6 +1,5 @@
 'use client'
 
-import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
 import myMoto from "@/app/components/products";
 import { useParams } from 'next/navigation';
@@ -30,7 +29,7 @@ const Itemdetail = ( ) =>  {
   
     return (
       <>
-          <Navbar/>
+       
     
 <div className="grid grid-cols-2">
     

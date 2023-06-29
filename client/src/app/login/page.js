@@ -5,7 +5,7 @@ import Icon from "./Icon.png";
 import Google from "./google.png";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import Navbar from "../components/Navbar";
+
 
 const loginpage = () => {
   const {
@@ -23,7 +23,7 @@ const loginpage = () => {
 
   return (
     <>
-    <Navbar/>
+   
     <div className="bg-forbg h-screen p-3">
       
       <div className=" bg-forcon flex justify-center p-10 border-2  border-slate-950  ml-[33%] mt-[7%] w-[31.25rem]">

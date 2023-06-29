@@ -2,8 +2,7 @@
 import './globals.css'
 import Link from 'next/link'
 import Image from "next/image";
-import Logo from "./components/Logo.png"
-
+import Header from './components/Navbar'
 
 export const metadata = {
   title: 'Rent Moto Cebu',
@@ -15,62 +14,7 @@ export default function Layout ({children}) {
  return (
     <html>
     <body>
-    {/* <ul className=" fixed flex h-[3.8rem]  bg-white top-0 w-screen p-4">
-      <li>
-        {" "}
-        <Link href="/">
-          {" "}
-          <Image
-            src={Logo}
-            height={61}
-            width={176}
-            alt="logo"
-            className="ml-10  -mt-3"
-          />
-        </Link>{" "}
-      </li>
-      <li>
-        <Link href="/" className="ml-nav  text-nav font-bold hover:text-red-600 active:text-violet-700">
-          {" "}
-           Home
-        </Link>{" "}
-      </li>
-      <li>
-        {" "}
-        <Link href="#" className="ml-nav text-nav font-bold">
-          {" "}
-          About
-        </Link>{" "}
-      </li>
-      <li>
-        {" "}
-        <Link href="#" className="ml-nav text-nav font-bold">
-          {" "}
-          Safety
-        </Link>{" "}
-      </li>
-      <li>
-        {" "}
-        <Link href="#" className="m-10 ml-nav text-nav font-bold">
-          {" "}
-          Contact
-        </Link>{" "}
-      </li>
-      <li>
-        {" "}
-        <Link href="/login" className="ml-56 text-nav font-bold  focus:text-red-600">
-          {" "}
-          Login
-        </Link>{" "}
-      </li>
-      <li>
-        {" "}
-        <Link href="/register" className="m-5 ml-nav text-nav font-bold">
-          {" "}
-          Sign Up
-        </Link>{" "}
-      </li>
-    </ul> */}
+    <Header/>
         {children}
         
     </body>
