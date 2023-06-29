@@ -20,13 +20,9 @@ module.exports = {
           },
 
           spacing: {
-            '31': '31.25rem',
-            '35': '35rem',
-            '33': '33%',
-            'mt': '4%',
+   
           'wbtn': ' 23.125rem',
           'hbtn': '2.75rem',
-          'cont': '39.125rem',
           'inpth': '2.75rem',
           'nav': '6rem',
           'hlogo': '3.8125rem',

@@ -1,4 +1,8 @@
+
 import './globals.css'
+import Link from 'next/link'
+import Image from "next/image";
+import Header from './components/Navbar'
 
 export const metadata = {
   title: 'Rent Moto Cebu',
@@ -10,7 +14,7 @@ export default function Layout ({children}) {
  return (
     <html>
     <body>
-     
+    <Header/>
         {children}
         
     </body>
