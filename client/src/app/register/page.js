@@ -1,12 +1,36 @@
+'use client'
 import Link from "next/link";
 import Image from "next/image";
 import Icon from "../login/icon.png";
 import Google from "../login/google.png";
-function Signup() {
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import Navbar from "../components/Navbar";
+
+const Signup = () => {
+
+
+    const {
+      register,
+      watch,
+      handleSubmit,
+      formState: { errors },
+    } = useForm();
+    const [show, setShow] = useState(false);
+    const formData = watch();
+    const formSubmit = (data) => {
+      console.log(data);
+      setShow(true);
+    };
+
+
+
   return (
-    <div className="bg-forbg h-screen p-3">
-      <div className=" bg-forcon flex justify-center p-10 border-2 shrink border-slate-950  ml-33 mt-mt w-31 h-cont">
-        <form className=" text-fortxt justify-center items-center ">
+   <>
+   <Navbar/>
+    <div className="bg-forbg h-full  p-5 ">
+      <div className=" bg-forcon flex justify-center p-5 border-2 shrink border-slate-950  ml-[33%] mt-[5.6%] w-[29.25rem] ">
+        <form onSubmit={handleSubmit(formSubmit)} className=" text-fortxt justify-center items-center" >
           <h1 className="p-1 font-poppins text-base font-semibold flex justify-center">
             Sign Up
           </h1>
@@ -55,33 +79,41 @@ function Signup() {
             <input
               type="text"
               placeholder="First Name"
-              required
+              {...register("firstName", { required: true })}
               className="flex bg-white w-wbtn justify-center rounded-brs mt-2 p-3 placeholder:italic h-inpth text-black"
             />
+             {errors.firstName && <p className="m-2 text-red-600">First Name is required.</p>}
+
             <input
               type="text"
               placeholder="Last Name"
-              required
+              {...register("lastname", { required: true })}
               className="flex bg-white w-wbtn justify-center rounded-brs mt-2 p-3 placeholder:italic h-inpth text-black"
             />
+            {errors.lastname && <p className="m-2 text-red-600">Last Name is required.</p>}
+
             <input
               type="email"
               placeholder="Email"
-              required
+              {...register("email", { required: true })}
               className="flex bg-white w-wbtn justify-center rounded-brs mt-2 p-3 placeholder:italic h-inpth text-black "
             />
+             {errors.email && <p className="m-2 text-red-600">Email is required.</p>}
             <input
               type="password"
               placeholder="Create  Password"
-              required
+              {...register("password", { required: true })}
               className="flex bg-white w-wbtn justify-center rounded-brs mt-2 p-3 placeholder:italic h-inpth text-black"
             />
+              {errors.password && <p className="m-2 text-red-600">Password is required.</p>}
             <input
               type="password"
               placeholder="Confirm Password"
-              required
+              {...register("confirmpass", { required: true })}
               className="flex bg-white w-wbtn justify-center rounded-brs mt-2 p-3 placeholder:italic h-inpth text-black"
             />
+
+             {errors.confirmpass && <p className="m-2 text-red-600">Confirm Password is required.</p>}
           </div>
           <button className="flex bg-forsbmt w-wbtn h-hbtn justify-center rounded-brs mt-4">
             <p className="mt-2">Sign Up</p>
@@ -89,6 +121,7 @@ function Signup() {
         </form>
       </div>
     </div>
+   </>
   );
 }
 

@@ -1,13 +1,33 @@
+'use client'
 import Link from "next/link";
 import Image from "next/image";
 import Icon from "./Icon.png";
 import Google from "./google.png";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import Navbar from "../components/Navbar";
 
-function loginpage() {
+const loginpage = () => {
+  const {
+    register,
+    watch,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const [show, setShow] = useState(false);
+  const formData = watch();
+  const formSubmit = (data) => {
+    console.log(data);
+    setShow(true);
+  };
+
   return (
+    <>
+    <Navbar/>
     <div className="bg-forbg h-screen p-3">
-      <div className=" bg-forcon flex justify-center p-10 border-2 shrink border-slate-950  ml-33 mt-mt w-31 h-35">
-        <form className=" text-fortxt justify-center items-center ">
+      
+      <div className=" bg-forcon flex justify-center p-10 border-2  border-slate-950  ml-[33%] mt-[7%] w-[31.25rem]">
+        <form onSubmit={handleSubmit(formSubmit)} className=" text-fortxt justify-center items-center ">
           <h1 className="p-1 font-poppins text-base font-semibold flex justify-center">
             Welcome Back
           </h1>
@@ -56,13 +76,19 @@ function loginpage() {
             <input
               type="text"
               placeholder="Email"
+              id="email"
+              {...register("email", { required: true })}
               className="flex bg-white w-wbtn h-hbtn justify-center rounded-brs mt-4 p-3 placeholder:italic text-black"
             />
+            {errors.email && <p className="m-2 text-red-600 ">Email is required.</p>}
+            
             <input
               type="password"
               placeholder="Password"
+              {...register("password", { required: true })}
               className="flex bg-white w-wbtn h-hbtn justify-center rounded-brs mt-4 p-3 placeholder:italic text-black"
             />
+            {errors.password && <p className="m-2 text-red-600">Password is required.</p>}
           </div>
 
           <Link href="#">
@@ -76,6 +102,7 @@ function loginpage() {
         </form>
       </div>
     </div>
+    </>
   );
 }
 

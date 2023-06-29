@@ -56,7 +56,7 @@ export default function Filter() {
           >
             <Image
               src={myMoto.image}
-              alt="test"
+              alt="Image"
               width={367}
               height={224}
               className="p-2"
@@ -71,7 +71,7 @@ export default function Filter() {
               <p> ₱ {myMoto.rent} / Weekly</p>
               <p> ₱ {myMoto.rent} / Monthly</p>
 
-              <Link href={`/vehiclemodels/${myMoto.name}`}>
+              <Link href={`/vehiclemodels/${myMoto.id}`}>
                 <div className="bg-foritem h-hrent w-wrent float-right mr-4 mt-4 flex justify-center">
                   <h1 className=" text-white  mt-4 text-rent">Rent</h1>
                 </div>
