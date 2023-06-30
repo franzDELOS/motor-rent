@@ -5,6 +5,8 @@ import myMoto from "@/app/components/products";
 import { useParams } from "next/navigation";
 import { Tab } from "@headlessui/react";
 import Default from "@/app/components/defaultsearch";
+import { useState } from 'react'
+import Modal from "@/app/components/Modal/Modal";
 
 const Itemdetail = () => {
   const params = useParams();
@@ -14,6 +16,8 @@ const Itemdetail = () => {
   const selectedItem = myMoto.find((myMoto) => myMoto.id.toString() === itemId);
 
   console.log("selectedItem:", selectedItem);
+
+
 
   if (!selectedItem) {
     return (
@@ -26,11 +30,27 @@ const Itemdetail = () => {
     );
   }
 
-  console.log(selectedItem.name);
+  let [isOpen, setIsOpen] = useState(false)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
+  const [inputValue, setInputValue] = useState('');
+
+  function clearInput() {
+    setInputValue('');
+  }
+
+  
 
   return (
-    <div className="h-[250vh] bg-forbg p-[5rem] pt-[7rem]">
-      <div className="grid grid-cols-2 bg-white p-[0.7rem]">
+    <div  className= { `${isOpen ? 'blur-lg h-[250vh]  inset-0 bg-slate-800  ' : 'h-[250vh] bg-forbg p-[5rem] pt-[7rem]'  }h-[250vh] bg-forbg p-[5rem] pt-[7rem] `}>
+      <div className={' grid grid-cols-2 bg-white p-[0.7rem]'}>
         <div className="mt-[2rem]">
           <Image
             src={selectedItem.image}
@@ -70,12 +90,21 @@ const Itemdetail = () => {
               </span>
             </li>
 
-            <button className="mt-8 w-[20rem] bg-forbg p-3 text-slate-50 font-bold hover:bg-slate-900">
+            <button onClick={openModal} className="mt-8 w-[20rem] bg-forbg p-3 text-slate-50 font-bold hover:bg-slate-900">
               Rent Now!
             </button>
           </ul>
         </div>
       </div>
+
+      <Modal 
+       isOpen={isOpen}
+       clearInput={clearInput}
+       setInputValue={setInputValue}
+       setIsOpen={setIsOpen}
+       inputValue={inputValue}
+   
+      />
 
       <div className="bg-black  mt-[3rem] ">
         <Tab.Group>
