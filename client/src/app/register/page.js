@@ -5,6 +5,7 @@ import Icon from "../login/icon.png";
 import Google from "../login/google.png";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import Button from "../components/Button";
 
 
 const Signup = () => {
@@ -115,9 +116,10 @@ const Signup = () => {
 
              {errors.confirmpass && <p className="m-2 text-red-600">Confirm Password is required.</p>}
           </div>
-          <button className="flex bg-forsbmt w-wbtn h-hbtn justify-center rounded-brs mt-4">
-            <p className="mt-2">Sign Up</p>
-          </button>
+          <Button 
+          text='Sign up'
+          className="flex bg-forsbmt w-wbtn h-hbtn justify-center rounded-brs mt-4 pt-2"
+          />
         </form>
       </div>
     </div>

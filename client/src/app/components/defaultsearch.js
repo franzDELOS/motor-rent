@@ -1,6 +1,7 @@
 import myMoto from "./products" 
 import Link from "next/link"
 import Image from "next/image"
+import Button from "./Button"
 
 const Default = () => {
 
@@ -23,7 +24,13 @@ const Default = () => {
           <h1 className="p-3 "> Daily :  <span className="font-bold">₱ {myMoto.rent}</span> </h1>
 
          <div className="mt-[2rem]">
-         <Link href={`/vehiclemodels/${myMoto.id}`} className="bottom-0 font-bold  text-white text-[18px] ml-[5rem]  p-3 bg-gray-500">Rent Now!</Link>
+         <Button 
+              text='More Details'
+              onClick={() => 
+                window.location.href = `/vehiclemodels/${myMoto.id}`} 
+                className="bottom-0 font-bold  text-white text-[18px] ml-[5rem]  p-3 bg-gray-500"
+                />
+
          </div>
        
        </div>

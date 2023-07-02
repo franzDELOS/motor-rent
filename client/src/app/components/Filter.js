@@ -4,6 +4,8 @@ import { useState } from "react";
 import Default from "./defaultsearch";
 import Link from "next/link";
 import Image from "next/image";
+import Button from "./Button";
+
 
 export default function Filter() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -26,6 +28,8 @@ export default function Filter() {
       setSearchResults(results);
     }
   };
+
+
 
   return (
     <div className="pl-nav pt-10 h-full  bg-black">
@@ -71,11 +75,14 @@ export default function Filter() {
               <p> ₱ {myMoto.rent} / Weekly</p>
               <p> ₱ {myMoto.rent} / Monthly</p>
 
-              <Link href={`/vehiclemodels/${myMoto.id}`}>
-                <div className="bg-foritem h-hrent w-wrent float-right mr-4 mt-4 flex justify-center">
-                  <h1 className=" text-white  mt-4 text-rent">Rent</h1>
-                </div>
-              </Link>
+              <Button 
+              text='Rent'
+              onClick={() => 
+                window.location.href = `/vehiclemodels/${myMoto.id}`}
+                className='bg-foritem h-hrent w-wrent float-right mr-4 flex justify-center text-white  pt-4 text-rent'
+              />
+
+
             </div>
           </div>
         ))}

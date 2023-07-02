@@ -7,6 +7,7 @@ import { Tab } from "@headlessui/react";
 import Default from "@/app/components/defaultsearch";
 import { useState } from 'react'
 import Modal from "@/app/components/Modal/Modal";
+import Button from "@/app/components/Button";
 
 const Itemdetail = () => {
   const params = useParams();
@@ -32,13 +33,16 @@ const Itemdetail = () => {
 
   let [isOpen, setIsOpen] = useState(false)
 
+
+  function openModal() {
+    setIsOpen(true) 
+  }
+
   function closeModal() {
     setIsOpen(false)
   }
 
-  function openModal() {
-    setIsOpen(true)
-  }
+
 
   const [inputValue, setInputValue] = useState('');
 
@@ -89,10 +93,12 @@ const Itemdetail = () => {
                 : ₱ {selectedItem.rent * 14 - selectedItem.rent * 7 * 0.3}{" "}
               </span>
             </li>
-
-            <button onClick={openModal} className="mt-8 w-[20rem] bg-forbg p-3 text-slate-50 font-bold hover:bg-slate-900">
-              Rent Now!
-            </button>
+            <Button
+             text={'Rent Now!'}
+             onClick={openModal}
+             className="mt-8 w-[20rem] bg-forbg p-3 text-slate-50 font-bold hover:bg-slate-900"
+  
+            />
           </ul>
         </div>
       </div>

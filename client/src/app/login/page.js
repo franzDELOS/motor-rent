@@ -5,6 +5,8 @@ import Icon from "./Icon.png";
 import Google from "./google.png";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import Button from "../components/Button";
+
 
 
 const loginpage = () => {
@@ -20,6 +22,8 @@ const loginpage = () => {
     console.log(data);
     setShow(true);
   };
+
+
 
   return (
     <>
@@ -96,9 +100,14 @@ const loginpage = () => {
               I forgot my password
             </p>
           </Link>
-          <button className="flex bg-forsbmt w-wbtn h-hbtn justify-center rounded-brs mt-4">
+          {/* <button className="flex bg-forsbmt w-wbtn h-hbtn justify-center rounded-brs mt-4">
             <p className="mt-2">Sign In</p>
-          </button>
+          </button> */}
+          <Button 
+           text='Sign In'
+          //  onClick={handleSignin}
+           className="flex bg-forsbmt p-2 w-wbtn h-hbtn justify-center rounded-brs mt-4"
+          />
         </form>
       </div>
     </div>
