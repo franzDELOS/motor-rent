@@ -9,7 +9,7 @@ const Default = () => {
     <div className="mt-[3rem] grid grid-cols-4 gap-3 p-4">
           
            {myMoto.slice(0,4).map((myMoto, index) => (
-       <div key={index} className="text-black  m-4 bg-white pb-9">
+       <div key={index} className="text-black  m-4 bg-white pb-9 rounded-[10px] ">
                
              <div className="bg-gray-400">
              <Image
