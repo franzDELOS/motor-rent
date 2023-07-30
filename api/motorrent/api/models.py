@@ -18,7 +18,6 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=255, validators=[MinLengthValidator(3)])
     last_name = models.CharField(max_length=255, validators=[MinLengthValidator(3)])
     email = models.EmailField(max_length=255, unique=True)
-    username = None
     is_active = models.BooleanField(default=True)
     username = None
     password = models.CharField(max_length=128)

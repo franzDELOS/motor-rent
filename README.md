@@ -14,6 +14,16 @@ menv\Scripts\activate
 
 ## create migration
 
+python manage.py migrate
+
+## run server
+
+python manage.py runserver
+
+'cd motorrent'
+
+## create migration
+
 python3 manage.py migrate
 
 ## run server
