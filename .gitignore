@@ -1,0 +1,14 @@
+# Python/Django
+__pycache__/
+*.py[cod]
+env/
+db.sqlite3
+menv/
+
+# Next.js
+.next/
+node_modules/
+.env
+
+# Other
+.DS_Store
